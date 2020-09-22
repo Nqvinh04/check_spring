@@ -27,17 +27,19 @@
         <tr>
             <td>Category:</td>
             <td>
-                <select name="category">
-                    <option th:each="c:${categorys}"
-                            th:value="${c.categoryId}"
-                            th:text="${c.categoryName}"
-                            th:selected="(${c.categoryId}==*{categoryId.categoryId})"></option>
-                </select>
+                <label>
+                    <select th:field="*{categoryId}" name="category">
+                        <option th:each="c:${categorys}"
+                                th:value="${c.categoryId}"
+                                th:text="${c.categoryName}"
+                                th:selected="(${c.categoryId}==*{categoryId.categoryId})"></option>
+                    </select>
+                </label>
             </td>
         </tr>
         <tr>
             <td></td>
-            <td><input type="submit" value="Update customer"></td>
+            <td><input type="submit" value="Update user"></td>
         </tr>
     </table>
 </form>
